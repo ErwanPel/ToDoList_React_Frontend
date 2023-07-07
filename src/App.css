@@ -1,0 +1,149 @@
+html {
+  font-size: 62.5%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&family=Montserrat:wght@300;400;700&family=Nunito+Sans:wght@300;400;700&family=PT+Sans:wght@700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ----------------------HEADER------------------------- */
+
+header {
+  height: 8rem;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 3rem;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header input {
+  width: 50rem;
+  padding-left: 1rem;
+  background-color: rgb(213, 234, 247);
+  height: 3rem;
+  border-radius: 0.5rem;
+  margin-right: 5rem;
+}
+
+.icon {
+  color: rgb(127, 80, 202);
+  border: 3px solid rgb(127, 80, 202);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}
+
+:is(.icon, .iconMoon, .iconLight):hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+:is(.iconMoon, .iconLight) {
+  padding: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 1px solid rgb(127, 80, 202);
+  color: rgb(127, 80, 202);
+}
+
+/* ----------------------MAIN------------------------- */
+
+main {
+  padding-top: 2rem;
+  height: calc(100vh - 8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* ----------------------CREATE TASK------------------------- */
+
+.createTask {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50rem;
+}
+
+.createTask button {
+  width: 15%;
+  background-color: rgb(127, 80, 202);
+  color: white;
+}
+
+.createTask input {
+  width: 80%;
+  padding-left: 1rem;
+  background-color: rgb(213, 234, 247);
+}
+
+:is(.createTask) input,
+button {
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+
+/* ----------------------BOX LISTS TO DO------------------------- */
+
+.boxList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-self: flex-start;
+  height: 35rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.boxList::-webkit-scrollbar {
+  display: none;
+}
+
+.lineList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.5rem;
+  width: 40rem;
+}
+
+.lineList > div:nth-of-type(2) {
+  width: 85%;
+}
+
+:is(.lineList) input,
+span,
+.icon_trash {
+  font-size: 1.3rem;
+}
+
+:is(.lineList) input,
+.icon_trash:hover {
+  cursor: pointer;
+}
+
+.finish {
+  text-decoration: line-through;
+}
+
+.unvisible {
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
